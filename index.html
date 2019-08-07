@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+    	* { padding: 0; margin: 0; }
+    	canvas { background: #eee; display: block; margin: 0 auto; }
+    </style>
+	<title>My Simulation game</title>
+</head>
+<body>
+	<button onClick="newHuman()">New human</button>
+	<button onClick="newFamily()">New family</button>
+	<button onClick="play()">></button>
+	<button onClick="advance1Year()">+1 year</button>
+	<canvas id="myCanvas" width="480" height="320"></canvas>
+	<h2>Families:</h2>
+	<ul id="families">
+
+	</ul>
+	<script src="human.js"></script>
+	<script src="human-generator.js"></script>
+	<script src="name-generator.js"></script>
+	<script src="probability-calculator.js"></script>
+	<script src="index.js"></script>
+	<script src="canvas.js"></script>
+</body>
+</html>
