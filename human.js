@@ -51,17 +51,17 @@ class Human {
         let children = [];
         if (!this.isSameGenderAs(other)) {
             let ageOfWoman = this.gender ? this.age : other.age;
-            let n = Math.random(); //got pregnant?
+            let n = Math.random(); // got pregnant?
             if (n <= ProbabilityCalculator.probabilityOfPregnancyByAge(ageOfWoman)) {
-                n = Math.random(); //is it more than one?
+                n = Math.random(); // is it more than one?
                 if (n <= ProbabilityCalculator.PROBABILITY_OF_TWINS) {
-                    //it's twins
-                    n = Math.random(); //is it identical twins?
+                    // it's twins
+                    n = Math.random(); // is it identical twins?
                     if (n <= ProbabilityCalculator.PROBABILITY_OF_IDENTICAL_TWINS) {
-                        //it's identical twins
+                        // it's identical twins
                         children.push(HumanGenerator.generateBabyTwins(this, other));
                     } else {
-                        //it's not identical twins
+                        // it's not identical twins
                         children.push(HumanGenerator.generateBaby(this, other));
                         children.push(HumanGenerator.generateBaby(this, other));
                     }
